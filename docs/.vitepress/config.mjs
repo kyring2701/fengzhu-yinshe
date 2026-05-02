@@ -5,6 +5,8 @@ export default defineConfig({
   description: '林间枫语，竹下清音 —— 一个专注于自然与心灵之声的音乐社团',
   lang: 'zh-CN',
 
+  head: [['link', { rel: 'icon', href: '/logo.png' }]],
+
   themeConfig: {
     siteTitle: '枫竹音社',
 
@@ -26,7 +28,7 @@ export default defineConfig({
 
     footer: {
       message: '林间枫语，竹下清音',
-      copyright: 'Copyright © 2026 枫竹音社 | Powered by 1996_麒麟'
+      copyright: 'Copyright © 2024 枫竹音社 | Powered by VitePress'
     },
 
     search: {

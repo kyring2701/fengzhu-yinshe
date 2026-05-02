@@ -14,8 +14,8 @@ layout: home
     <p class="gbc-tagline">用爱发电的线上乐团</p>
     <p class="gbc-desc">不论技术，平等交流<br>一起演奏快乐的乐章</p>
     <div class="gbc-actions">
-      <a class="gbc-btn gbc-btn-primary" href="/about/">加入我们</a>
-      <a class="gbc-btn gbc-btn-alt" href="/works/">欣赏作品</a>
+      <a class="gbc-btn gbc-btn-primary" href="/contact/">加入我们</a>
+      <a class="gbc-btn gbc-btn-alt" href="https://space.bilibili.com/3546946262272192" target="_blank">欣赏作品</a>
     </div>
   </aside>
 
