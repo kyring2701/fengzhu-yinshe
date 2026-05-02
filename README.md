@@ -11,22 +11,28 @@
 
 ## 🌐 访问官网
 
-**[枫竹音社官方网站](https://fengzhu-yinshe.pages.dev/)**
+**[枫竹音社官方网站](https://www.somb.xyz/)**
 
 ## 📋 项目结构
 fengzhu-yinshe/
 ├── docs/
-│ ├── .vitepress/ # VitePress 配置
+│ ├── .vitepress/
 │ │ └── config.mjs
-│ ├── public/ # 静态资源
+│ ├── public/
 │ │ └── logo.png
-│ ├── index.md # 首页
-│ ├── about/ # 关于社团
-│ ├── guide/ # 云合奏指南
-│ ├── contact/ # 联系我们
-│ ├── members/ # 主要成员
-│ ├── recommend/ # 曲目推荐
-│ └── works/ # 作品欣赏
+│ ├── index.md
+│ ├── about/
+│ │ └── index.md
+│ ├── guide/
+│ │ └── index.md
+│ ├── contact/
+│ │ └── index.md
+│ ├── members/
+│ │ └── index.md
+│ ├── recommend/
+│ │ └── index.md
+│ └── works/
+│ └── index.md
 ├── package.json
 └── .gitignore
 
