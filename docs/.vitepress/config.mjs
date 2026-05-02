@@ -28,7 +28,7 @@ export default defineConfig({
 
     footer: {
       message: '林间枫语，竹下清音',
-      copyright: 'Copyright © 2024 枫竹音社 | Powered by 1996_麒麟'
+      copyright: 'Copyright © 2026 枫竹音社 | Powered by 1996_麒麟'
     },
 
     search: {
