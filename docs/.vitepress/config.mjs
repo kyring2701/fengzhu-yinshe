@@ -13,7 +13,7 @@ export default defineConfig({
     nav: [
       { text: '首页', link: '/' },
       { text: '关于社团', link: '/about/' },
-      { text: '主要成员', link: '/members/' },
+      { text: '活跃成员', link: '/members/' },
       { text: '云合奏指南', link: '/guide/' },
       { text: '联系我们', link: '/contact/' },
       {

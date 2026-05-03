@@ -47,7 +47,7 @@ layout: home
     </a>
     <a class="gbc-card" href="/members/">
       <div class="gbc-card-icon">👥</div>
-      <h3>主要成员</h3>
+      <h3>活跃成员</h3>
       <p>认识我们社团的核心成员们，每一位都是热爱音乐的演奏者与创作者。</p>
       <span class="gbc-card-link">查看成员 →</span>
     </a>
