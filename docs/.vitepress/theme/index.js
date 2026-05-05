@@ -1,11 +1,25 @@
 // docs/.vitepress/theme/index.js
 import DefaultTheme from 'vitepress/theme'
 import MembersList from './components/MembersList.vue'
+import GlobalMusicPlayer from './components/GlobalMusicPlayer.vue'
+import { h, defineComponent } from 'vue'
+
+// 定义一个包装布局组件
+const CustomLayout = defineComponent({
+  name: 'CustomLayout',
+  setup() {
+    return () => h(DefaultTheme.Layout, null, {
+      'layout-bottom': () => h(GlobalMusicPlayer)
+    })
+  }
+})
 
 export default {
   extends: DefaultTheme,
+  // 使用自定义包装布局
+  Layout: CustomLayout,
   enhanceApp({ app }) {
-    // 注册全局组件，这样在任意 .md 文件中都能直接使用
     app.component('MembersList', MembersList)
+    app.component('GlobalMusicPlayer', GlobalMusicPlayer)
   }
 }

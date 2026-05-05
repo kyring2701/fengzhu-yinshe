@@ -1,10 +1,68 @@
 import { defineConfig } from 'vitepress'
+import { writeFileSync, mkdirSync } from 'fs'
+import { resolve, dirname } from 'path'
+import { fileURLToPath } from 'url'
+
+// 获取当前文件的目录路径（替代 __dirname）
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
+
+// 生成播放器挂载脚本
+function generatePlayerMountScript() {
+  const dir = resolve(__dirname, '../public')
+  mkdirSync(dir, { recursive: true })
+  writeFileSync(resolve(dir, 'mount-player.js'), `
+    // 使用 VitePress 全局的 Vue 和组件注册表
+    document.addEventListener('DOMContentLoaded', () => {
+      const mountPoint = document.getElementById('global-music-player')
+      if (mountPoint && window.__VP_HASH_MAP__) {
+        // 从 VitePress 内部获取 app 实例比较困难，直接使用原始 DOM 方式
+        // 创建一个隔离的 Vue 3 应用
+        const { createApp, h } = window.Vue
+        // 动态获取组件定义（通过 VitePress 全局组件名）
+        const app = createApp({
+          render() {
+            // 直接在渲染函数中使用全局组件
+            return h('global-music-player')
+          }
+        })
+        app.mount('#global-music-player')
+      }
+    })
+  `)
+}
+
+// Vite 插件：在页面中注入播放器挂载点
+function injectMusicPlayerPlugin() {
+  // 先执行生成脚本
+  generatePlayerMountScript()
+  
+  return {
+    name: 'inject-music-player',
+    transformIndexHtml(html) {
+      return html.replace(
+        '</body>',
+        '<div id="global-music-player"></div></body>'
+      )
+    }
+  }
+}
 
 export default defineConfig({
   title: '枫竹音社',
   description: '林间枫语，竹下清音 —— 一个专注于自然与心灵之声的音乐社团',
 
-  head: [['link', { rel: 'icon', href: '/logo.png' }]],
+  head: [
+    ['link', { rel: 'icon', href: '/logo.png' }],
+    // 加载播放器挂载脚本
+    ['script', { type: 'module', src: '/mount-player.js' }]
+  ],
+
+  vite: {
+    plugins: [
+      injectMusicPlayerPlugin()
+    ]
+  },
 
   locales: {
     root: {
