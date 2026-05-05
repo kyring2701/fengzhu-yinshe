@@ -6,7 +6,7 @@
     "custom_role": "官号",
     "sign": "一个线上音乐社，感谢各位捧场，希望可以和大家一起玩！",
     "level": 3,
-    "follower": 275
+    "follower": 291
   },
   {
     "uid": "1106378310",
@@ -15,7 +15,7 @@
     "custom_role": "团长",
     "sign": "斯巴拉西~",
     "level": 5,
-    "follower": 429
+    "follower": 432
   },
   {
     "uid": "438403212",
@@ -24,7 +24,7 @@
     "custom_role": "副团长",
     "sign": "qq群:1074218896 CAFUC keyboard领域小资历 雇佣兵 jpop 爵士 acg 进攻D点！合作请私信",
     "level": 6,
-    "follower": 289
+    "follower": 294
   },
   {
     "uid": "1518247",
@@ -33,7 +33,7 @@
     "custom_role": "策划",
     "sign": "个人简介：键盘侠、猴大无脑不理智粉、摸头村玩家、待补充...",
     "level": 6,
-    "follower": 162
+    "follower": 164
   },
   {
     "uid": "95816790",
@@ -42,7 +42,7 @@
     "custom_role": "策划",
     "sign": "这个人不懒，所以写了这些",
     "level": 6,
-    "follower": 381
+    "follower": 384
   },
   {
     "uid": "396181849",
@@ -51,7 +51,7 @@
     "custom_role": "混音",
     "sign": "耳朵是革命的本钱",
     "level": 6,
-    "follower": 274
+    "follower": 283
   },
   {
     "uid": "227240",
@@ -60,7 +60,7 @@
     "custom_role": "混音",
     "sign": "只想吹打动人心的曲子微博@叮叮糖叮糖关注数 449 粉丝数 1710 获赞数 3370 播放数 24.9万 粉丝视角 新访客视角",
     "level": 6,
-    "follower": 1719
+    "follower": 1721
   },
   {
     "uid": "108592513",
@@ -69,16 +69,7 @@
     "custom_role": "剪辑",
     "sign": "一天练琴6小时",
     "level": 6,
-    "follower": 9086
-  },
-  {
-    "uid": "2100389573",
-    "name": "Nicooooo_ooooo0",
-    "face": "/avatars/2100389573.jpg",
-    "custom_role": "贝斯手+技术",
-    "sign": "",
-    "level": 5,
-    "follower": 49
+    "follower": 9125
   },
   {
     "uid": "3546869187742180",
@@ -87,7 +78,7 @@
     "custom_role": "主唱",
     "sign": "我只想用颤动的音 告诉你我的选择",
     "level": 5,
-    "follower": 6999
+    "follower": 7069
   },
   {
     "uid": "380896999",
@@ -96,7 +87,7 @@
     "custom_role": "主唱",
     "sign": "这里是什么都可能唱的桃子,因为喜欢的番过多！头像是自设请勿盗！欢迎光临，不喜勿喷呀0.0，欢迎约单和扩列！感谢喜欢",
     "level": 6,
-    "follower": 2040
+    "follower": 2051
   },
   {
     "uid": "1593854073",
@@ -105,7 +96,7 @@
     "custom_role": "主唱",
     "sign": "我被发现了！",
     "level": 4,
-    "follower": 315
+    "follower": 316
   },
   {
     "uid": "625048058",
@@ -114,7 +105,7 @@
     "custom_role": "主唱",
     "sign": "我是yuu（也是碎不碎！ 09年高二生已忙晕x_x 弾き語り 合作私信请标明来意",
     "level": 6,
-    "follower": 12711
+    "follower": 12735
   },
   {
     "uid": "6357388",
@@ -132,7 +123,7 @@
     "custom_role": "鼓手",
     "sign": "狂暴器伥组长 学业繁忙缓更 合作私信",
     "level": 6,
-    "follower": 136183
+    "follower": 136231
   },
   {
     "uid": "1170030196",
@@ -141,7 +132,7 @@
     "custom_role": "鼓手",
     "sign": "笑啥呢，有女朋友了么就笑",
     "level": 5,
-    "follower": 329
+    "follower": 333
   },
   {
     "uid": "2039789966",
@@ -150,7 +141,7 @@
     "custom_role": "吉他手",
     "sign": "音乐小群:210909579",
     "level": 6,
-    "follower": 386
+    "follower": 401
   },
   {
     "uid": "3493107542788176",
@@ -159,6 +150,33 @@
     "custom_role": "贝斯手",
     "sign": "人如果舍弃了个性，就和死了没什么两样",
     "level": 5,
-    "follower": 2397
+    "follower": 2408
+  },
+  {
+    "uid": "2100389573",
+    "name": "Nicooooo_ooooo0",
+    "face": "/avatars/2100389573.jpg",
+    "custom_role": "贝斯手+技术",
+    "sign": "",
+    "level": 5,
+    "follower": 50
+  },
+  {
+    "uid": "519304332",
+    "name": "Fantasia_in_A",
+    "face": "/avatars/519304332.jpg",
+    "custom_role": "编曲+作曲",
+    "sign": "首都师大附中高中生钢琴演奏者、管乐爱好者 需要合作请加v：cjb18210209167",
+    "level": 5,
+    "follower": 252
+  },
+  {
+    "uid": "524341537",
+    "name": "事珠颈斑鸠",
+    "face": "/avatars/524341537.webp",
+    "custom_role": "贝斯手",
+    "sign": "一个自学三四个月的半吊子贝斯手（长笛/键盘）",
+    "level": 5,
+    "follower": 204
   }
 ]

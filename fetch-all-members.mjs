@@ -1,5 +1,6 @@
 // fetch-and-save.mjs
 // 从 members-config.txt 读取配置 → 抓取B站信息 → 下载头像 → 生成JSON文件
+// 成员顺序严格按照 members-config.txt 中的排列顺序
 
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'fs'
 import { join, dirname } from 'path'
@@ -21,6 +22,7 @@ function readConfig() {
   
   if (!existsSync(CONFIG_FILE)) {
     console.error('❌ 配置文件不存在:', CONFIG_FILE)
+    console.error('请创建 members-config.txt 文件，每行格式: UID 角色名')
     process.exit(1)
   }
   
@@ -38,7 +40,18 @@ function readConfig() {
     }
   }
   
-  console.log(`✅ 读取到 ${configs.length} 个成员配置\n`)
+  if (configs.length === 0) {
+    console.error('❌ 配置文件中没有有效的成员数据')
+    process.exit(1)
+  }
+  
+  console.log(`✅ 读取到 ${configs.length} 个成员配置`)
+  console.log('📋 显示顺序将严格按照配置文件中的排列:\n')
+  configs.forEach((c, i) => {
+    console.log(`   ${i + 1}. UID:${c.uid} - ${c.custom_role}`)
+  })
+  console.log('')
+  
   return configs
 }
 
@@ -126,6 +139,8 @@ const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms))
 
 // ========== 主函数 ==========
 async function main() {
+  const startTime = Date.now()
+  
   console.log('🍁 枫竹音社 - 成员信息抓取 & 头像下载工具')
   console.log('='.repeat(60))
   
@@ -139,7 +154,7 @@ async function main() {
   // 确保 avatars 目录存在
   if (!existsSync(AVATARS_DIR)) {
     mkdirSync(AVATARS_DIR, { recursive: true })
-    console.log('📁 创建头像目录:', AVATARS_DIR)
+    console.log('📁 创建头像目录:', AVATARS_DIR, '\n')
   }
   
   for (let i = 0; i < memberConfigs.length; i++) {
@@ -152,7 +167,7 @@ async function main() {
       // 1. 获取B站用户信息
       const data = await fetchUser(config.uid)
       
-      // 2. 处理签名（合并多行）
+      // 2. 处理签名（合并多行，去除多余空格）
       const cleanSign = (data.sign || '')
         .replace(/\n/g, ' ')
         .replace(/\s+/g, ' ')
@@ -207,14 +222,17 @@ async function main() {
     console.log('')
   }
   
-  // 按角色排序
-  const roleOrder = ['官号', '团长', '副团长', '策划', '混音', '剪辑', '主唱', '鼓手', '吉他手', '贝斯手']
-  members.sort((a, b) => {
-    return roleOrder.indexOf(a.custom_role) - roleOrder.indexOf(b.custom_role)
-  })
+  // 保持 members-config.txt 中的原始顺序，不排序
+  // members 数组的顺序就是 configs 的顺序
   
   // 保存 JSON 文件
+  const publicDir = dirname(OUTPUT_JSON)
+  if (!existsSync(publicDir)) {
+    mkdirSync(publicDir, { recursive: true })
+  }
   writeFileSync(OUTPUT_JSON, JSON.stringify(members, null, 2), 'utf-8')
+  
+  const elapsed = ((Date.now() - startTime) / 1000).toFixed(1)
   
   // 输出统计
   console.log('='.repeat(60))
@@ -222,14 +240,22 @@ async function main() {
   console.log(`   ✅ 成员信息获取: ${successCount}/${memberConfigs.length}`)
   console.log(`   🖼️ 头像下载成功: ${avatarSuccessCount}/${memberConfigs.length}`)
   console.log(`   💰 API消耗积分: ${successCount * 4}`)
+  console.log(`   ⏱️ 耗时: ${elapsed}秒`)
   console.log(`   📁 JSON文件: ${OUTPUT_JSON}`)
   console.log(`   📁 头像目录: ${AVATARS_DIR}`)
+  console.log(`   📋 显示顺序: 严格按照 members-config.txt 排列`)
   console.log('='.repeat(60))
   console.log('\n✅ 全部完成！现在可以刷新网页查看效果了。')
+  
+  // 提示如何修改顺序
+  console.log('\n💡 提示:')
+  console.log('   要调整成员显示顺序，只需编辑 members-config.txt 中的排列顺序')
+  console.log('   然后重新运行 node fetch-and-save.mjs 即可')
 }
 
 // 运行
 main().catch(err => {
-  console.error('💥 脚本运行出错:', err)
+  console.error('💥 脚本运行出错:', err.message)
+  console.error(err.stack)
   process.exit(1)
 })
