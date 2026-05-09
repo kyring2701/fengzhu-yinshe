@@ -33,6 +33,12 @@ layout: home
       <p>Visit our Bilibili channel to watch our newest ensemble performances! Every production is crafted with care, delivering joy and emotion through music.</p>
       <span class="gbc-card-link">Bilibili →</span>
     </a>
+    <a class="gbc-card" href="https://sheet.somb.xyz" target="_blank">
+      <div class="gbc-card-icon">🎼</div>
+      <h3>Sheet Music</h3>
+      <p>Explore our carefully curated sheet music library, covering ACG, classical, pop, and more, providing inspiration and support for your performances.</p>
+      <span class="gbc-card-link">Browse Sheets →</span>
+    </a>
     <a class="gbc-card" href="/en/recommend/">
       <div class="gbc-card-icon">🎹</div>
       <h3>Recommend a Piece</h3>
@@ -41,7 +47,7 @@ layout: home
     </a>
     <a class="gbc-card" href="/en/guide/">
       <div class="gbc-card-icon">📋</div>
-      <h3>Online Ensemble Guide</h3>
+      <h3>Ensemble Guide</h3>
       <p>A complete walkthrough from sign-up, practice, and recording to final submission — ensuring every participant's effort shines perfectly.</p>
       <span class="gbc-card-link">Read Guide →</span>
     </a>
@@ -53,7 +59,7 @@ layout: home
     </a>
     <a class="gbc-card" href="/en/contact/">
       <div class="gbc-card-icon">📬</div>
-      <h3>Contact Us</h3>
+      <h3>Join Us</h3>
       <p>Our community has just set sail. We welcome all music lovers to join. Have suggestions or collaboration ideas? Reach out anytime.</p>
       <span class="gbc-card-link">Get in Touch →</span>
     </a>

@@ -33,6 +33,12 @@ layout: home
       <p>前往B站主页观看我们的最新合奏作品！每期用心制作，用音乐传递快乐与感动。</p>
       <span class="gbc-card-link">B站主页 →</span>
     </a>
+    <a class="gbc-card" href="https://sheet.somb.xyz" target="_blank">
+      <div class="gbc-card-icon">🎼</div>
+      <h3>枫竹曲谱</h3>
+      <p>探索我们精心整理的乐谱库，涵盖ACG、古典、流行等多种风格，为你的演奏提供灵感与支持。</p>
+      <span class="gbc-card-link">浏览曲谱 →</span>
+    </a>
     <a class="gbc-card" href="/recommend/">
       <div class="gbc-card-icon">🎹</div>
       <h3>曲目推荐</h3>
@@ -53,7 +59,7 @@ layout: home
     </a>
     <a class="gbc-card" href="/contact/">
       <div class="gbc-card-icon">📬</div>
-      <h3>联系我们</h3>
+      <h3>加入我们</h3>
       <p>社团刚刚启航，欢迎热爱音乐的你加入。有建议或合作意向？随时联系我们。</p>
       <span class="gbc-card-link">取得联系 →</span>
     </a>

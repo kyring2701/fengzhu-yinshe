@@ -33,6 +33,12 @@ layout: home
       <p>Bilibiliチャンネルで最新のアンサンブル作品をチェック！毎回心を込めて制作し、音楽で喜びと感動をお届けします。</p>
       <span class="gbc-card-link">Bilibili →</span>
     </a>
+    <a class="gbc-card" href="https://sheet.somb.xyz" target="_blank">
+      <div class="gbc-card-icon">🎼</div>
+      <h3>楽譜</h3>
+      <p>厳選された楽譜ライブラリを探索。ACG、クラシック、ポップスなど、さまざまなスタイルをカバーし、演奏のインスピレーションとサポートを提供します。</p>
+      <span class="gbc-card-link">楽譜を見る →</span>
+    </a>
     <a class="gbc-card" href="/ja/recommend/">
       <div class="gbc-card-icon">🎹</div>
       <h3>曲の推薦</h3>
@@ -53,7 +59,7 @@ layout: home
     </a>
     <a class="gbc-card" href="/ja/contact/">
       <div class="gbc-card-icon">📬</div>
-      <h3>お問合せ</h3>
+      <h3>参加する</h3>
       <p>コミュニティはまだ始まったばかり。音楽を愛するあなたの参加をお待ちしています。ご提案やコラボのご相談も随時受付中。</p>
       <span class="gbc-card-link">連絡する →</span>
     </a>
